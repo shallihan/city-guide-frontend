@@ -1,12 +1,12 @@
-import UsersList from '../components/UsersList';
+import UsersList from "../components/UsersList";
 
 const Users = () => {
   const USERS = [
     {
-      id: 'u1',
-      name: 'Max Schwarz',
+      id: "51795",
+      name: "Olga Huendz",
       image:
-        'https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        "https://images.unsplash.com/photo-1616428362406-4ffd9fcbf023?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
       places: 3
     }
   ];
