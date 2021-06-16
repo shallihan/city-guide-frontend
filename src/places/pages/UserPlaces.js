@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 
 import PlaceList from "../components/PlaceList";
-const PLACES = [
+export const PLACES = [
   {
     id: "54846",
     title: "SQIRL CAFE",
