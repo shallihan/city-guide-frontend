@@ -11,8 +11,8 @@ const PLACES = [
       "https://lh3.googleusercontent.com/proxy/Mn6clpS2VSnJdOEYGNLBMJYnL2Hmws5NJeSwJY6V25gdi02QcU9cGukBc6vYUrWJ2yhXmvd5zKDQ7yqTvwBlYMGdTUSAcTMiPttfmb77aJygRydeLIa_",
     address: "720 N Virgil Ave, Los Angeles, CA 90029, United States",
     location: {
-      lat: 11.1788135,
-      lng: -140.5395463,
+      lat: 34.0844664,
+      lng: -118.2866903,
     },
     creator: "user1",
   },

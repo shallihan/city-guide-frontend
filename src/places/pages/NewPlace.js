@@ -1,5 +1,9 @@
+import Input from "../../shared/components/FormElements/Input";
+
 const NewPlace = () => {
-    return <h1>New Place</h1>
+    return <form className="place-form">
+        <Input type="text" label="title" />
+    </form>
 };
 
 
