@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthenticationContext } from "../../shared/context/authentication-context";
 import Card from "../../shared/components/UIElements/Card";
 import Button from "../../shared/components/FormElements/Button";
 import Modal from "../../shared/components/UIElements/Modal";
@@ -6,6 +7,7 @@ import Map from "../../shared/components/UIElements/Map";
 import "./PlaceItem.css";
 
 const PlaceItem = (props) => {
+  const authentication = useContext(AuthenticationContext);
   const [showMap, setShowMap] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
   const openMapHandler = () => setShowMap(true);
@@ -27,16 +29,29 @@ const PlaceItem = (props) => {
         footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
       >
         <div className="map-container">
-          <Map center={props.coordinates} zoom={16}/>
+          <Map center={props.coordinates} zoom={16} />
         </div>
       </Modal>
-      <Modal  show={showDelete} onCancel={closeDeleteHandler} header="Are you sure?" footerClass="place-item__modal-actions" footer={
-        <>
-        <Button inverse onClick={closeDeleteHandler}>CANCEL</Button>
-        <Button danger onClick={confirmDeleteHandler}>DELETE</Button>
-        </>
-      }>
-        <p>Deleting an entry is irreversible. Are you sure you want to delete {props.title}</p>
+      <Modal
+        show={showDelete}
+        onCancel={closeDeleteHandler}
+        header="Are you sure?"
+        footerClass="place-item__modal-actions"
+        footer={
+          <>
+            <Button inverse onClick={closeDeleteHandler}>
+              CANCEL
+            </Button>
+            <Button danger onClick={confirmDeleteHandler}>
+              DELETE
+            </Button>
+          </>
+        }
+      >
+        <p>
+          Deleting an entry is irreversible. Are you sure you want to delete{" "}
+          {props.title}
+        </p>
       </Modal>
       <li className="place-item">
         <Card className="place-item__content">
@@ -49,9 +64,17 @@ const PlaceItem = (props) => {
             <p>{props.description}</p>
           </div>
           <div className="place-item__actions">
-            <Button inverse onClick={openMapHandler}>VIEW ON MAP</Button>
-            <Button to={`/places/${props.id}`}>EDIT</Button>
-            <Button danger onClick={showDeleteHandler}>DELETE</Button>
+            <Button inverse onClick={openMapHandler}>
+              VIEW ON MAP
+            </Button>
+            {authentication.isLoggedIn && (
+              <Button to={`/places/${props.id}`}>EDIT</Button>
+            )}
+            {authentication.isLoggedIn && (
+              <Button danger onClick={showDeleteHandler}>
+                DELETE
+              </Button>
+            )}
           </div>
         </Card>
       </li>
