@@ -8,7 +8,7 @@ export const PLACES = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sequi illo nobis cum odio eaque!",
     imageURL:
-      "https://lh3.googleusercontent.com/proxy/Mn6clpS2VSnJdOEYGNLBMJYnL2Hmws5NJeSwJY6V25gdi02QcU9cGukBc6vYUrWJ2yhXmvd5zKDQ7yqTvwBlYMGdTUSAcTMiPttfmb77aJygRydeLIa_",
+      "https://aws1.discourse-cdn.com/business5/uploads/berkeleyfoodie/original/3X/6/2/6212fa3bcb8cd509e2587033535651d50b49adfb.jpeg",
     address: "720 N Virgil Ave, Los Angeles, CA 90029, United States",
     location: {
       lat: 34.0844664,
