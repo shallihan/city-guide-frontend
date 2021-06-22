@@ -83,9 +83,9 @@ const Auth = () => {
     } else {
       try {
         const formData = new FormData();
-        formData.append('name', formState.inputs.email.name);
+        formData.append('name', formState.inputs.name.value);
         formData.append('email', formState.inputs.email.value);
-        formData.append('password', formState.inputs.email.password);
+        formData.append('password', formState.inputs.password.value);
         formData.append('image', formState.inputs.image.value);
         const responseData = await sendRequest(
           "http://localhost:5000/api/users/signup",
