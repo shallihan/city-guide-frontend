@@ -92,7 +92,7 @@ const Auth = () => {
           "POST",
           formData
         );
-        authorisation.login(responseData.userId);
+        authorisation.login(responseData.userId, responseData.token);
       } catch (err) {}
     }
   };
