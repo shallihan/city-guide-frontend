@@ -19,6 +19,9 @@
 
 .main-navigation__title {
   color: white;
+  font-family: 'Benne', serif;
+  margin-top: 3rem;
+  font-size: 3rem;
 }
 
 .main-navigation__title a {
